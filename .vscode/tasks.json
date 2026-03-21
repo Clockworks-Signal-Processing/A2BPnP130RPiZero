@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Project",
+            "type": "shell",
+            "command": "${userHome}/.pico-sdk/cmake/v3.28.6/bin/cmake --build ${workspaceFolder}/build -j4 2>&1",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "options": {
+                "env": {
+                    "PICO_SDK_PATH": "${env:USERPROFILE}/.pico-sdk/sdk/2.0.0",
+                    "PICO_TOOLCHAIN_PATH": "${env:USERPROFILE}/.pico-sdk/toolchain/13_2_Rel1",
+                    "Path": "${env:USERPROFILE}/.pico-sdk/toolchain/13_2_Rel1/bin;${env:USERPROFILE}/.pico-sdk/picotool/2.0.0/picotool;${env:USERPROFILE}/.pico-sdk/cmake/v3.28.6/bin;${env:USERPROFILE}/.pico-sdk/ninja/v1.12.1;${env:PATH}"
+                }
+            },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "Clean Project",
+            "type": "shell",
+            "command": "${userHome}/.pico-sdk/cmake/v3.28.6/bin/cmake --build ${workspaceFolder}/build --target clean 2>&1",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

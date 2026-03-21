@@ -1,0 +1,4 @@
+win32/pnp/*.a
+win32/stack/*.a
+win32/pnp/*.lib
+win32/stack/*.lib

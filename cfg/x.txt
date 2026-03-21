@@ -1,0 +1,13 @@
+% is a comment line
+enDbg
+configType 2
+streamByConnection 1
+globalMute 0
+ignoreEEPROM 1
+autoApply 1
+filePath adi_a2b_system_autoconfig_RJ45.dat
+deepDbg
+
+
+
+
